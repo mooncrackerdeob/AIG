@@ -1,0 +1,46 @@
+<Page
+    x:Class="TidalSurge.Views.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ScrollViewer Background="{StaticResource BgBaseBrush}" Padding="8">
+        <StackPanel Spacing="16">
+            <TextBlock Text="Settings" Style="{StaticResource HeaderText}"/>
+            <!-- Account Status -->
+            <Border Background="{StaticResource BgElevatedBrush}" CornerRadius="12" Padding="16">
+                <StackPanel>
+                    <TextBlock Text="Account Status" Style="{StaticResource BodyText}"/>
+                    <TextBlock Text="User: goose_w2 · License: Lifetime · Exp: 3817 days" Style="{StaticResource CaptionText}"/>
+                </StackPanel>
+            </Border>
+
+            <!-- General Settings -->
+            <Border Background="{StaticResource BgElevatedBrush}" CornerRadius="12" Padding="16">
+                <StackPanel Spacing="12">
+                    <TextBlock Text="General Settings" Style="{StaticResource BodyText}"/>
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <TextBlock Text="Roblox Sensitivity" Style="{StaticResource BodyText}"/>
+                        <Slider Minimum="0" Maximum="2" Value="1" Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <TextBlock Text="Ping Compensation" Style="{StaticResource BodyText}"/>
+                        <ToggleSwitch/>
+                        <TextBlock Text="Ping: 23 ms" Style="{StaticResource CaptionText}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <ToggleSwitch Header="Enable Controller Lock-on"/>
+                        <TextBox PlaceholderText="Keybind (e.g., LeftAlt)" Width="200" Style="{StaticResource InputStyle}"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- Config Manager -->
+            <Border Background="{StaticResource BgElevatedBrush}" CornerRadius="12" Padding="16">
+                <StackPanel Orientation="Horizontal" Spacing="12">
+                    <Button Content="Save Config"/>
+                    <Button Content="Load Config"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
+
